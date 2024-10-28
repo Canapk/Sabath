@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sabath Kingdom</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .navbar {
+            background-color: transparent;
+            border: 1px solid white;
+        }
+        .navbar-brand {
+            color: white;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .navbar-brand:hover {
+            color: black;
+            background-color: white;
+        }
+        .nav-link {
+            color: white;
+            border: 1px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid white;
+        }
+        .error-header {
+            cursor: pointer;
+            background-color: #000000;
+            color: white;
+        }
+        .solutions {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
+            opacity: 0;
+        }
+        .solutions.show {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        .list-group-item-info {
+            background-color: #e9ecef;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .toggle-icon {
+            transition: transform 0.2s;
+        }
+        .text-white {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../css/img/B.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-top"> Sabath Kingdom
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./carpetas.html">Carpetas compartidas red</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./errores.html">Errores y soluciones</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <ul class="list-group" data-aos="fade-right">
+                <li class="list-group-item error-header" onclick="toggleSolutions('common-errors')">Errores comunes <span class="toggle-icon">▼</span></li>
+                <div class="solutions" id="common-errors">
+                    <li class="list-group-item list-group-item-info">1. Error de permisos: No se puede acceder a la carpeta compartida. <br><strong>Solución:</strong> Verificar que los usuarios tengan permisos de lectura y escritura.</li>
+                    <li class="list-group-item list-group-item-info">2. Error de conexión de red: No se puede conectar a la carpeta compartida. <br><strong>Solución:</strong> Verificar que la conexión de red esté estable.</li>
+                    <li class="list-group-item list-group-item-info">3. Error de ruta de acceso: No se puede encontrar la carpeta compartida. <br><strong>Solución:</strong> Verificar que la ruta de acceso esté correcta.</li>
+                    <li class="list-group-item list-group-item-info">4. Error de nombre de carpeta: El nombre de la carpeta no es válido. <br><strong>Solución:</strong> Verificar que el nombre de la carpeta sea válido.</li>
+                    <li class="list-group-item list-group-item-info">5. Error de formato de archivo: El formato de archivo no es compatible. <br><strong>Solución:</strong> Verificar que el formato de archivo sea compatible.</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col">
+            <ul class="list-group" data-aos="fade-right">
+                <li class="list-group-item error-header" onclick="toggleSolutions('config-errors')">Errores de configuración <span class="toggle-icon">▼</span></li>
+                <div class="solutions" id="config-errors">
+                    <li class="list-group-item list-group-item-info">1. Error de configuración de compartición: La carpeta no está compartida correctamente. <br><strong>Solución:</strong> Verificar que la carpeta esté compartida en la red.</li>
+                    <li class="list-group-item list-group-item-info">2. Error de configuración de seguridad: La carpeta no está segura. <br><strong>Solución:</strong> Verificar que los permisos de seguridad estén configurados correctamente.</li>
+                    <li class="list-group-item list-group-item-info">3. Error de ruta de acceso: No se puede encontrar la carpeta compartida. <br><strong>Solución:</strong> Verificar que la ruta de acceso esté correcta.</li>
+                    <li class="list-group-item list-group-item-info">4. Error de configuración de DNS: La configuración de DNS no es correcta. <br><strong>Solución:</strong> Verificar que la configuración de DNS sea correcta.</li>
+                    <li class="list-group-item list-group-item-info">5. Error de configuración de firewall: El firewall bloquea el acceso. <br><strong>Solución:</strong> Verificar que el firewall esté configurado correctamente.</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col">
+            <ul class="list-group" data-aos="fade-right">
+                <li class="list-group-item error-header" onclick="toggleSolutions('compatibility-errors')">Errores de compatibilidad <span class="toggle-icon">▼</span></li>
+                <div class="solutions" id="compatibility-errors">
+                    <li class="list-group-item list-group-item-info">1. Error de compatibilidad de sistemas operativos: La carpeta no es compatible con el sistema operativo. <br><strong>Solución:</strong> Verificar que la carpeta esté compartida en un formato compatible.</li>
+                    <li class="list-group-item list-group-item-info">2. Error de versión de protocolo: La versión del protocolo no es compatible. <br><strong>Solución:</strong> Verificar que la versión del protocolo sea compatible.</li>
+                    <li class="list-group-item list-group-item-info">3. Error de software de red: El software de red no funciona correctamente. <br><strong>Solución:</strong> Verificar que el software de red esté actualizado.</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col">
+            <ul class="list-group" data-aos="fade-right">
+                <li class="list-group-item error-header" onclick="toggleSolutions('performance-errors')">Errores de rendimiento <span class="toggle-icon">▼</span></li>
+                <div class="solutions" id="performance-errors">
+                    <li class="list-group-item list-group-item-info">1. Error de rendimiento de red: La carpeta se carga lentamente. <br><strong>Solución:</strong> Verificar que la conexión de red esté estable.</li>
+                    <li class="list-group-item list-group-item-info">2. Error de velocidad de transferencia: La velocidad de transferencia es lenta. <br><strong>Solución:</strong> Verificar que la velocidad de transferencia sea adecuada.</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col">
+            <ul class="list-group" data-aos="fade-right">
+                <li class="list-group-item error-header" onclick="toggleSolutions('auth-errors')">Errores de autenticación <span class="toggle-icon">▼</span></li>
+                <div class="solutions" id="auth-errors">
+                    <li class="list-group-item list-group-item-info">1. Error de autenticación: No se puede acceder a la carpeta compartida. <br><strong>Solución:</strong> Verificar que las credenciales de acceso estén correctas.</li>
+                    <li class="list-group-item list-group-item-info">2. Error de contraseña: La contraseña es incorrecta. <br><strong>Solución:</strong> Verificar que la contraseña sea correcta.</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <<div class="container mt-4">
+        <p class="fs-1 mt-4 text-center">UNIREM</p>
+        <div class="row">
+            <p class="fs-3 mt-4 text-center">Alumnos</p>
+            <div class="col mt-4 ms-5">
+                <div class="card" style="width: 200px;">
+                    <img src="../css/img/Mario.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Mario Salvador Garibay Díaz</p>
+                        <p class="card-text">N. Control: 223302336</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-4 ms-5">
+                <div class="card" style="width: 200px;">
+                    <img src="../css/img/erwin.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Erwin Dayan Velázquez Arollo</p>
+                        <p class="card-text">N. Control: 223302338</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-4 ms-5">
+                <div class="card" style="width: 200px;">
+                    <img src="../css/img/Nico.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Kendra Nicole López González</p>
+                        <p class="card-text">N. Control: 223302340</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="fs-1 mt-4 text-center">Examen</p>
+                <p class="fw-bold text-center">Redes</p>
+                <p class="fw-bold text-center">Grupo: CS0701V</p>
+            </div>
+            <div class="col">
+                <p class="fs-1 mt-4 text-center">Síguenos</p>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center mt-4" style="background-color: black; color: white; padding: 10px;">
+        <p>TOMATOX || CANAPK</p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    function toggleSolutions(id) {
+        var solutions = document.getElementById(id);
+        var icon = solutions.previousElementSibling.querySelector(".toggle-icon");
+        solutions.classList.toggle("show");
+        if (solutions.classList.contains("show")) {
+            solutions.style.display = "block";
+            setTimeout(() => {
+                solutions.style.display = "";
+            }, 800);
+        } else {
+            solutions.style.display = "none";
+        }
+        icon.style.transform = solutions.classList.contains("show") ? "rotate(180deg)" : "rotate(0deg)";
+    }
+    AOS.init();
+</script>
+</body>
+</html>
